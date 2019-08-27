@@ -19,7 +19,7 @@ h2 {
 
 h4 {
     font-size: 15px;
-    color: #d9d9d9;
+    color: #c1c1c1;
     font-weight: 200;
 }
 
@@ -27,6 +27,19 @@ hr {
     border-color: black;
     margin: 0;
     margin-bottom: 25px;
+}
+
+p {
+    color: #79858f;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
 }
 
 /* HEADER STYLES */
@@ -53,10 +66,6 @@ header {
 
 /* INPUT STYLES */
 
-input {
-    width: 100%;
-}
-
 input[type="text"]::placeholder {
     text-align: right;
     padding-right: 10px;
@@ -65,18 +74,10 @@ input[type="text"]::placeholder {
     color: #d9d9d9;
 }
 
-input[type="text"] {
-    cursor: pointer;
-    font-size: 18px;
-    padding-left: 10px;
-    height: 50px;
-    border-radius: 5px;
-    border: none;
-    background-color: rgb(247, 247, 247);
-    margin-bottom: 25px;
-}
-
-input[type="text"]:focus {
+input[type="text"]:focus,
+textarea:focus,
+select[name="user_state"]:focus,
+button:active {
     outline: none;
     border: solid;
     border-width: 2px;
@@ -88,7 +89,8 @@ input[id="zip"] {
 }
 
 
-select[name="user_state"] {
+select[name="user_state"],
+input[type="text"] {
     cursor: pointer;
     font-size: 15px;
     color: grey;
@@ -101,13 +103,6 @@ select[name="user_state"] {
     width: 100%;
 }
 
-select[name="user_state"]:focus {
-    outline: none;
-    border: solid;
-    border-width: 2px;
-    border-color: #2a3946;
-}
-
 
 label {
     display: block;
@@ -115,4 +110,90 @@ label {
     font-size: 15px;
     font-weight: 100;
     color: #2a3946;
+}
+
+.inline {
+    font-weight: 300;
+    display: inline;
+    margin-left: 15px;
+  }
+
+textarea {
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px;
+    height: 100px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(247, 247, 247);
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+    font-size: 25px;
+    font-style: bold;
+    color: white;
+    background-color: #00beb6;
+    height: 70px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+}
+
+button:focus {
+    outline: none;
+}
+
+
+/* MEDIA QUERIES */
+
+@media(min-width: 768px) {
+
+    .container {
+        margin: 0 15px 0 15px;
+        max-width: 768px;
+        margin: auto;
+    }
+
+    .flex-contain {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+
+    label[for="email"],
+    label[for="phone"],
+    label[for="address"],
+    label[for="city"],
+    label[for="state"],
+    label[for="zip"], {
+        flex: 1;
+    }
+
+    input[type="text"],{
+        flex: 2;
+    }
+
+    /* label[for="name"],
+    label[for="email"],
+    label[for="phone"],
+    label[for="address"],
+    label[for="city"],
+    label[for="state"],
+    label[for="zip"],
+    input[id="name"],
+    input[id="email"],
+    input[id="phone"],
+    input[id="address"],
+    input[id="city"],
+    input[id="state"],
+    input[id="zip"] {
+        display: flex;
+
+    } */
+
+    
+
 }
