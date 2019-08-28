@@ -8,6 +8,10 @@
     margin: 0 15px 0 15px;
 }
 
+.flex-contain {
+    margin: 20px 0;
+}
+
 h1 {
     font-size: 21px;
     margin: auto;
@@ -27,6 +31,15 @@ hr {
     border-color: black;
     margin: 0;
     margin-bottom: 25px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+.single-line {
+    margin: 40px 0;
 }
 
 p {
@@ -99,7 +112,6 @@ input[type="text"] {
     border-radius: 5px;
     border: none;
     background-color: rgb(247, 247, 247);
-    margin-bottom: 25px;
     width: 100%;
 }
 
@@ -133,7 +145,7 @@ textarea {
 button {
     cursor: pointer;
     font-size: 25px;
-    font-style: bold;
+
     color: white;
     background-color: #00beb6;
     height: 70px;
@@ -152,48 +164,28 @@ button:focus {
 @media(min-width: 768px) {
 
     .container {
-        margin: 0 15px 0 15px;
         max-width: 768px;
-        margin: auto;
+        margin: 0 auto;
+
     }
 
     .flex-contain {
         display: flex;
-        justify-content: flex-end;
-        flex-direction: column;
+        flex-direction: row;
+        align-items: center;
+        margin: 20px 0;
     }
 
-    label[for="email"],
-    label[for="phone"],
-    label[for="address"],
-    label[for="city"],
-    label[for="state"],
-    label[for="zip"], {
-        flex: 1;
+    label {
+        flex-grow: 0;
+        flex-basis: 150px;
+        margin: 0;
     }
 
-    input[type="text"],{
-        flex: 2;
+    input,
+    select {
+        flex-grow: 1;
     }
 
-    /* label[for="name"],
-    label[for="email"],
-    label[for="phone"],
-    label[for="address"],
-    label[for="city"],
-    label[for="state"],
-    label[for="zip"],
-    input[id="name"],
-    input[id="email"],
-    input[id="phone"],
-    input[id="address"],
-    input[id="city"],
-    input[id="state"],
-    input[id="zip"] {
-        display: flex;
-
-    } */
-
-    
 
 }
