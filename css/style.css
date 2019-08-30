@@ -38,6 +38,10 @@ fieldset {
     padding: 0;
 }
 
+legend {
+    font-size: 18px;
+}
+
 .single-line {
     margin: 40px 0;
 }
@@ -79,7 +83,8 @@ header {
 
 /* INPUT STYLES */
 
-input[type="text"]::placeholder {
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
     text-align: right;
     padding-right: 10px;
     font-size: 12px;
@@ -103,7 +108,9 @@ input[id="zip"] {
 
 
 select[name="user_state"],
-input[type="text"] {
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
     cursor: pointer;
     font-size: 15px;
     color: grey;
@@ -178,7 +185,7 @@ button:focus {
 
     label {
         flex-grow: 0;
-        flex-basis: 150px;
+        flex-basis: 180px;
         margin: 0;
     }
 
